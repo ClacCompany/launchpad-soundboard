@@ -1,11 +1,11 @@
-# launchpad-soundboard
+# Launchpad Soundboard
 
 ## Supported Launchpads:
  - Launchpad Mk2
-
-## WIP:
- - Add custom sounds
  
 ## Dependencies:
  - playsound
  - keyboard
+
+## WIP:
+ - Add custom sounds
