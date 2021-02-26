@@ -1,12 +1,24 @@
-import LaunchpadMk2
-import glob, os
 from playsound import playsound
 from threading import Thread
+import Launchpad
+import glob
+import os
+
+lpmode = open("launchpad", "r").read()
+if len(lpmode) > 0:
+    LAUNCHPAD = lpmode
+else:
+    LAUNCHPAD = input("Please enter your Launchpad: ")
+    open("launchpad", "w").write(LAUNCHPAD)
 
 
 class Soundboard:
     def __init__(self):
-        self.lp = LaunchpadMk2.LaunchpadMk2()
+        s0 = {
+            "pro": Launchpad.LaunchpadPro,
+            "mk2": Launchpad.LaunchpadMk2
+        }
+        self.lp = s0.get(LAUNCHPAD.lower(), Launchpad.LaunchpadMk2)()
         self.lp.Reset()
         self.lp.ButtonStateRaw()
         self.sounds = []
@@ -15,6 +27,7 @@ class Soundboard:
                         (3, 4), (3, 5), (3, 6), (3, 7), (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6), (4, 7), (5, 1),
                         (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (5, 7), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6),
                         (6, 7), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (7, 7)]
+        self.lp.LedAllOn()
         self.lp.register_on_button_press(on_button=self.on_button_press)
         self.lp.continue_listener = True
         self.init_sounds()
