@@ -1,12 +1,11 @@
 # launchpad-soundboard
 
-Currently supported Launchpads:
--Launchpad Mk2
+## Supported Launchpads:
+    -Launchpad Mk2
 
-In work:
--Add custon sounds
+## WIP:
+    -Add custon sounds
  
- Depemdencies:
--playsound
--keyboard
--tkinter(currently not necessary)
+## Dependencies:
+    -playsound
+    -keyboard
