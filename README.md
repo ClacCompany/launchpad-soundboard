@@ -10,4 +10,4 @@
 ## WIP:
  - Add custom sounds
 
-### [Open in Github Desktop](x-github-desktop://openRepo/https://github.com/ClacCompany/launchpad-soundboard/)
+### [Open in Github Desktop](x-github-client://openRepo/https://github.com/ClacCompany/launchpad-soundboard)
