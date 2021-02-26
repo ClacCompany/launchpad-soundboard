@@ -7,6 +7,7 @@ In work:
   -Add custon sounds
  
  Depemdencies:
+ 
   -playsound
   -keyboard
   -tkinter(currently not necessary)
